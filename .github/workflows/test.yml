@@ -30,8 +30,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: |
-            - ~/ckanext-dcat_usmetadata
-            - ~/.cache
+            - ~/
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - name: Install dependencies
         run: |
@@ -53,8 +52,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: |
-            - ~/ckanext-dcat_usmetadata
-            - ~/.cache
+            - ~/
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - name: Run node tests
         run: yarn test:metadata-app
