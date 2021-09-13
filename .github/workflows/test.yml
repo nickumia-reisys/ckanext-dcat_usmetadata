@@ -49,6 +49,13 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: '3.6'
+      - name: Cache Metadata App
+        uses: actions/cache@v2
+        with:
+          path: |
+            - ~/ckanext-dcat_usmetadata
+            - ~/.cache
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - name: Run node tests
         run: yarn test:metadata-app
 
