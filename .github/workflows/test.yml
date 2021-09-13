@@ -154,5 +154,5 @@ jobs:
       - name: pypi-publish
         uses: pypa/gh-action-pypi-publish@v1.4.2
         with:
-          user: nickumia-reisys
+          user: __token__
           password: ${{ secrets.PYPI_API_TOKEN }}
