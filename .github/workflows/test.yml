@@ -140,6 +140,8 @@ jobs:
     needs: [test-js]
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@v2
       - name: Install dependencies
         run: |
           yarn
